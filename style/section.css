@@ -70,3 +70,6 @@
     background-image: url("../pictures/not-done.png");
     background-position: center;
 }
+.section__itemDone{
+    text-decoration: line-through;
+}
