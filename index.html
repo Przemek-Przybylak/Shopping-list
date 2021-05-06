@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/section.css">
+    <script defer src="script/script.js"></script>
+    <title>Shopping list</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1 class="header__tittle">Lista zadań</h1>
+    </header>
+    <section class="section">
+        <div class="section__container">
+            <h2 class="section__tittle">Dodaj nowe zadanie </h2>
+        </div>
+        <form class="section__form">
+            <p class="section__paragraph">
+                <label> <input class="section__input" name="task" placeholder="Co jest do zrobienia?" autofocus></label>
+            </p>
+            <button class="section__button">Dodaj zadanie</button>
+        </form>
+    </section>
+    <section class="section">
+        <div class="section__container">
+            <h2 class="section__tittle">Lista zadań</h2>
+        </div>
+        <ul class="section__list">
+            <li class="section__item"> <button class="section__image section__image--green"></button> Example item
+                <button class="section__image section__image--red"></button> </li>
+            <li class="section__item"> <button class="section__image section__image--green"></button> Example item
+                <button class="section__image section__image--red"></button></li>
+        </ul>
+    </section>
+
+</body>
+
+</html>
