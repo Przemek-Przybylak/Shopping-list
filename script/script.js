@@ -1,13 +1,6 @@
 {
     const tasks = [
-        {
-            content: "Stworzyć listę zakupów",
-            done: false,
-        },
-        {
-            content: "Nauczyć sie 5 nowych zwrotów z języka angielskiego",
-            done: true,
-        },
+        
     ]
 
     const render = () => {
@@ -26,12 +19,31 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
     }
 
-    const init = () => {
-        render();
-
-        const form = addEventListener("submit", (event) => {
-            event.preventDefault();
+    const addNewTask = (newTaskContent) => {
+        tasks.push({
+            content: newTaskContent,
+            done: false,
         });
+        render();
+    }
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+
+        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        
+        if (newTaskContent === ""){
+            return;
+        }
+
+     addNewTask(newTaskContent);
+     
+    };
+
+    const init = () => {
+        
+
+        const form = addEventListener("submit", onFormSubmit);
 
     };
 
