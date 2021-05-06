@@ -29,6 +29,9 @@
     const init = () => {
         render();
 
+        const form = addEventListener("submit", (event) => {
+            event.preventDefault();
+        });
 
     };
 
