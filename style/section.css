@@ -43,33 +43,44 @@
     justify-content: flex-start;
     align-items: center;
 }
-.section__list{
+
+.section__list {
     margin: 0px;
     list-style: none;
     padding: 30px 30px;
-    
 }
-.section__item{
+
+.section__item {
     display: flex;
     border-bottom: 1px solid rgb(214, 214, 214);
     padding: 10px 0px;
     align-items: center;
 }
-.section__image{
+
+.section__item--strikeout {
+    text-decoration: line-through;
+}
+
+.section__image {
     width: 25px;
     height: 25px;
 }
-.section__image--red{
+
+.section__image--red {
     margin-left: auto;
     background-image: url("../pictures/trash.png");
     background-position: center;
     background-size: cover;
 }
-.section__image--green{
+
+.section__image--green {
     margin-right: 10px;
     background-image: url("../pictures/not-done.png");
     background-position: center;
 }
-.section__itemDone{
-    text-decoration: line-through;
+
+.section__itemDone {
+    background-image: url("../pictures/complete.png");
+    background-size: cover;
+    background-position: center;
 }
