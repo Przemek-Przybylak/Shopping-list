@@ -25,7 +25,7 @@
 
         removeButtons.forEach((removeButton, taskIndex) => {
             removeButton.addEventListener("click", () => {
-               removeTask(taskIndex);
+                removeTask(taskIndex);
             });
         });
 
@@ -33,14 +33,14 @@
 
         toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
             toggleDoneButton.addEventListener("click", () => {
-               toggleTaskDone(taskIndex);
+                toggleTaskDone(taskIndex);
             });
         });
     }
 
     const render = () => {
         let htmlString = "";
-        
+
         for (const task of tasks) {
             htmlString += `
             <li  class="section__item ${task.done ? "section__item--strikeout " : ""}"> 
@@ -49,7 +49,7 @@
             <button class="section__image section__image--red js-remove"></button> 
             </li>
             `;
-        
+
         }
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
@@ -61,17 +61,17 @@
         event.preventDefault();
 
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
-        
-        if (newTaskContent === ""){
+
+        if (newTaskContent === "") {
             return;
         }
 
-     addNewTask(newTaskContent);
-     
+        addNewTask(newTaskContent);
+
     };
 
     const init = () => {
-        
+
 
         const form = addEventListener("submit", onFormSubmit);
 
