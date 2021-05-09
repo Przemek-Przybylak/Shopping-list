@@ -15,6 +15,17 @@
         render();
     };
 
+    const resetInput = (newTask) => {
+        newTask.value = "";
+        activeInput(newTask);
+    };
+
+    const activeInput = (newTask) => {
+        newTask.focus();
+    };
+
+
+
     const toggleTaskDone = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done;
         render();
@@ -61,12 +72,18 @@
         event.preventDefault();
 
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
-
+        const newTask = document.querySelector(".js-newTask");
+        
+        
+        
         if (newTaskContent === "") {
             return;
         }
 
         addNewTask(newTaskContent);
+        resetInput(newTask);
+        activeInput(newTask);
+        
 
     };
 
