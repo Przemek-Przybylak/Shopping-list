@@ -11,7 +11,7 @@ As the name suggests, the program is used to create a shopping list.
 The program itself renders the view after each change, so that the entire list can be dynamically handled.  
 You can add, delete, and mark products as purchased.
 
-## Breakdown of Shopping-list.
+## Breakdown of Shopping-list
 Project is divided into 3 main parts:
 
 1. Index.html - this file contains the document structure and its content.
