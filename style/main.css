@@ -2,11 +2,11 @@ html {
     box-sizing: border-box;
 }
 
-*,::after,::before{
+*, ::after, ::before {
     box-sizing: inherit;
 }
 
-.body{
+.body {
     background-color: #eee;
     font-family: 'Ubuntu', sans-serif;
 }
