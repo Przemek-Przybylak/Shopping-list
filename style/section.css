@@ -110,6 +110,8 @@
 .section__image {
     width: 25px;
     height: 25px;
+    flex-shrink: 0;
+    border: none;
 }
 
 .section__image--red {
@@ -129,4 +131,8 @@
     background-image: url("../pictures/complete.png");
     background-size: cover;
     background-position: center;
+}
+
+.section__task {
+    margin: 0 10px;
 }
