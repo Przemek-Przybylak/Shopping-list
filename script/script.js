@@ -77,12 +77,12 @@
         
         
         if (newTaskContent === "") {
+            resetInput(newTask);
             return;
         }
 
         addNewTask(newTaskContent);
         resetInput(newTask);
-        activeInput(newTask);
         
 
     };
