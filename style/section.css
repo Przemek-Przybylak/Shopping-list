@@ -107,21 +107,21 @@
     text-decoration: line-through;
 }
 
-.section__image {
+.section__imageButton {
     width: 25px;
     height: 25px;
     flex-shrink: 0;
     border: none;
 }
 
-.section__image--red {
+.section__imageButton--red {
     margin-left: auto;
     background-image: url("../pictures/trash.png");
     background-position: center;
     background-size: cover;
 }
 
-.section__image--green {
+.section__imageButton--green {
     margin-right: 10px;
     background-image: url("../pictures/not-done.png");
     background-position: center;

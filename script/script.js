@@ -55,9 +55,9 @@
         for (const task of tasks) {
             htmlString += `
             <li  class="section__item ${task.done ? "section__item--strikeout " : ""}"> 
-            <button class="section__image section__image--green ${task.done ? "section__itemDone" : ""} js-taskDone"></button>
+            <button class="section__imageButton section__imageButton--green ${task.done ? "section__itemDone" : ""} js-taskDone"></button>
             <span class="section__task">${task.content}</span>
-            <button class="section__image section__image--red js-remove"></button> 
+            <button class="section__imageButton section__imageButton--red js-remove"></button> 
             </li>
             `;
 
