@@ -1,7 +1,16 @@
-.header{
-    max-width: 800px;
-    width: 80%;
-    margin:50px auto;
+.header {
     margin-bottom: 25px;
     font-size: 16px;
+}
+
+.header__tittle {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 996px) {
+    .header__tittle {
+        padding-top: 5px;
+        padding-bottom: 3px;
+    }
 }

@@ -1,14 +1,10 @@
 .section {
-    max-width: 800px;
-    width: 80%;
-    margin: 25px auto;
+    margin: 0px auto;
     background-color: white;
 }
 
-@media (max-width: 767px) {
-    .section {
-        width: 90%;
-    }
+.section__tasks {
+    margin: 25px 0;
 }
 
 .section__container {
@@ -36,7 +32,7 @@
     .section__button {
         align-self: center;
         margin-bottom: 20px;
-        width:  90%;
+        width: 90%;
         margin-right: auto;
         margin-left: auto;
     }
