@@ -72,46 +72,46 @@
     };
 
     const renderButtons = () => {
-        let htmlButtons ="";
+        let htmlButtons = "";
 
         htmlButtons += `
-        <button class = "button__hidingDone">Ukryj ukończone</button>
-        <button class = "button__doneAll">Ukończ wszystkie</button>`
-        ;
+        <button class = "button__item button__item--hidingDone">Ukryj ukończone</button>
+        <button class = "button__item button__item--doneAll">Ukończ wszystkie</button>`
+            ;
 
-    document.querySelector(".js-buttonsArea").innerHTML = htmlButtons;
+        document.querySelector(".js-buttonsArea").innerHTML = htmlButtons;
 
-};
-
-const render = () => {
-    renderTaks();
-    renderButtons();
-
-    bindEvents();
-
-};
-
-const onFormSubmit = (event) => {
-    event.preventDefault();
-
-    const newTaskContent = document.querySelector(".js-newTask").value.trim();
-    const newTask = document.querySelector(".js-newTask");
-
-    if (newTaskContent === "") {
-        resetInput(newTask);
-        return;
     };
 
-    addNewTask(newTaskContent);
-    resetInput(newTask);
-};
+    const render = () => {
+        renderTaks();
+        renderButtons();
 
-const init = () => {
+        bindEvents();
 
-    form = document.querySelector(".js-form");
-    form = addEventListener("submit", onFormSubmit);
+    };
 
-};
+    const onFormSubmit = (event) => {
+        event.preventDefault();
 
-init();
+        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const newTask = document.querySelector(".js-newTask");
+
+        if (newTaskContent === "") {
+            resetInput(newTask);
+            return;
+        };
+
+        addNewTask(newTaskContent);
+        resetInput(newTask);
+    };
+
+    const init = () => {
+
+        form = document.querySelector(".js-form");
+        form = addEventListener("submit", onFormSubmit);
+
+    };
+
+    init();
 }
