@@ -4,3 +4,7 @@
     padding: 20px;
     background-color: white;
 }
+
+.button--hidden{
+    display: none;
+}

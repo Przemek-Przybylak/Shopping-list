@@ -1,5 +1,6 @@
 {
     let tasks = [];
+    let hideDoneTask = false;
 
     const addNewTask = (newTaskContent) => {
         tasks = [
@@ -38,7 +39,15 @@
         render();
     };
 
-    const bindEvents = () => {
+    const toggleHideDoneTask = () => {
+        hideDoneTask = !hideDoneTask;
+       
+        render();
+    };
+
+    
+
+    const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, taskIndex) => {
@@ -55,14 +64,26 @@
             });
         });
     };
+
+      
+
+    const bindButtonsEvent = () => {
+        const buttonHidingDone = document.querySelector(".js-hidingDone");
+        if (buttonHidingDone) {
+            buttonHidingDone.addEventListener("click", toggleHideDoneTask);
+        };
+
+        
+    };
+
     const renderTaks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-            <li  class="section__item ${task.done ? "section__item--strikeout " : ""}"> 
+            <li  class="section__item ${hideDoneTask && task.done ? "button--hidden " : ""}"> 
             <button class="section__imageButton section__imageButton--green ${task.done ? "section__itemDone" : ""} js-taskDone"></button>
-            <span class="section__task">${task.content}</span>
+            <span class="section__task js-taskContent ${task.done ? "section__item--strikeout" : "" } ">${task.content}</span>
             <button class="section__imageButton section__imageButton--red js-remove"></button> 
             </li>
             `;
@@ -73,13 +94,16 @@
 
     const renderButtons = () => {
         let htmlButtons = "";
+        const buttons = document.querySelector(".js-buttons");
+
 
         htmlButtons += `
-        <button class = "button__item button__item--hidingDone">Ukryj ukończone</button>
-        <button class = "button__item button__item--doneAll">Ukończ wszystkie</button>`
+        <button class = "button__item button__item--hidingDone js-hidingDone ${!tasks.length ? "button--hidden" : ""} ">
+        ${hideDoneTask ? "Pokaż" : "Ukryj"} ukończone</button>
+        <button class = "button__item button__item--doneAll js-doneAll">Ukończ wszystkie</button>`
             ;
 
-        document.querySelector(".js-buttonsArea").innerHTML = htmlButtons;
+        buttons.innerHTML = htmlButtons;
 
     };
 
@@ -87,7 +111,9 @@
         renderTaks();
         renderButtons();
 
-        bindEvents();
+        bindRemoveEvents();
+        bindButtonsEvent();
+
 
     };
 
