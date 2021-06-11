@@ -17,11 +17,24 @@
     align-items: center;
 }
 
+@media (max-width: 767px) {
+    .section__container--tittleTask {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 .section__tittle {
-    padding: 20px;
+    padding: 30px;
     font-size: 22px;
     margin-bottom: 0;
     margin-top: 0px;
+}
+
+@media (max-width: 767px) {
+    .section__tittle {
+        width: 100%;
+    }
 }
 
 .section__button {

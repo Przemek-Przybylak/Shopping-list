@@ -6,6 +6,12 @@
     transition: 0.5s;
 }
 
+@media (max-width: 767px) {
+    .button__item {
+        width: 100%;
+    }
+}
+
 .button__item:hover {
     color: rgb(56, 179, 179);
 }
