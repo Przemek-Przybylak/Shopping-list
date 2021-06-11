@@ -94,10 +94,10 @@
             htmlString += `
             <li  class="section__item ${hideDoneTask && task.done ? "button--hidden " : ""}"> 
             <button class="section__imageButton section__imageButton--green js-taskDone 
-            ${task.done ? "section__itemDone" : ""}"></button>
+            ">${task.done ? "✔" : ""}</button>
             <span class="section__task js-taskContent 
             ${task.done ? "section__item--strikeout" : ""} ">${task.content}</span>
-            <button class="section__imageButton section__imageButton--red js-remove"></button> 
+            <button class="section__imageButton section__imageButton--red js-remove">🗑</button> 
             </li>
             `;
 

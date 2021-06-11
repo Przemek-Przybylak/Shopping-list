@@ -1,10 +1,19 @@
-.button__item{
+.button__item {
     border: none;
     color: teal;
     padding: 20px;
     background-color: white;
+    transition: 0.5s;
 }
 
-.button--hidden{
+.button__item:hover {
+    color: rgb(56, 179, 179);
+}
+
+.button__item:disabled {
+    color: #ccc;
+}
+
+.button--hidden {
     display: none;
 }

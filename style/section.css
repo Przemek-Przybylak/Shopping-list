@@ -32,6 +32,11 @@
     background-color: teal;
     color: white;
     border: none;
+    transition: 0.5s;
+}
+
+.section__button:hover {
+    background-color: rgb(56, 179, 179);
 }
 
 @media (max-width: 767px) {
@@ -118,21 +123,28 @@
 
 .section__imageButton--red {
     margin-left: auto;
-    background-image: url("../pictures/trash.png");
+    background-color: rgb(228, 39, 39);
     background-position: center;
     background-size: cover;
+    color: white;
+    transition: 0.5s;
+}
+
+.section__imageButton--red:hover {
+    background-color: rgb(255, 101, 45);
 }
 
 .section__imageButton--green {
     margin-right: 10px;
-    background-image: url("../pictures/not-done.png");
+    background-color: darkgreen;
     background-position: center;
+    transition: 0.5s;
+    background-size: cover;
+    color: white;
 }
 
-.section__itemDone {
-    background-image: url("../pictures/complete.png");
-    background-size: cover;
-    background-position: center;
+.section__imageButton--green:hover {
+    background-color: forestgreen;
 }
 
 .section__task {
