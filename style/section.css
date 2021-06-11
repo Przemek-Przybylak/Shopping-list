@@ -37,6 +37,7 @@
 
 .section__button:hover {
     background-color: rgb(56, 179, 179);
+    transform: scale(1.1);
 }
 
 @media (max-width: 767px) {
