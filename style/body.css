@@ -1,0 +1,11 @@
+.body {
+    background-color: #eee;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 50px 200px;
+}
+
+@media (max-width: 996px) {
+    .body {
+        padding: 30px 20px;
+    }
+}
