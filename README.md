@@ -2,6 +2,16 @@
 
 Shopping-list link: https://przemek-przybylak.github.io/Shopping-list/
 
+[![to-do-list-ss.png](https://i.postimg.cc/8cLYMcyV/to-do-list-ss.png)](https://przemek-przybylak.github.io/To-Do-List-React/)
+
+## How it's working?
+1. In the first field please write what's to do.
+2. Teal Button on rigth with description "Dodaj zadanie: is use to add task.
+3. When task is added you can see it under "Lista zadań" description.
+4. If you want You can select the task as done ( green square on left ), or remove task ( red square on right ).
+5. If you want you can change all tasks to done teal description ( ukończ wszystkie ) on right-top.
+6. If you want You can also hiding done tasks teal description ( ukryj okończone ) on right-top.
+
 ## Welcome
 I'm glad you decided to watch my new site.  
 If you need to do shopping, you've come to the right place!  
